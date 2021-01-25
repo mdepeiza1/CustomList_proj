@@ -8,7 +8,7 @@ namespace CustomListUnitTests
     public class PlusOperatorUnitTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void MakeTwoLists_AddIntsToBothLists_CheckFinalList()
         {
         }
     }
