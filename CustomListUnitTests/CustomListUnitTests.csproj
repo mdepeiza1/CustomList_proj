@@ -50,7 +50,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddMethodUnitTest.cs" />
+    <Compile Include="CapacityPropertyUnitTest.cs" />
+    <Compile Include="CountPropertyUnitTest.cs" />
+    <Compile Include="IndexUnitTest.cs" />
+    <Compile Include="IterableUnitTest.cs" />
+    <Compile Include="MinusOperatorUnitTest.cs" />
+    <Compile Include="PlusOperatorUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveMethodUnitTest.cs" />
+    <Compile Include="SortMethodUnitTest.cs" />
+    <Compile Include="ToStringMethodUnitTest.cs" />
+    <Compile Include="ZipMethodUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
