@@ -13,6 +13,8 @@ namespace CustomListUnitTests
             //Arrange
             CustomList<int> list1 = new CustomList<int>();
             CustomList<int> list2 = new CustomList<int>();
+            CustomList<int> list3 = new CustomList<int>();
+
             int int1 = 1;
             int int2 = 2;
             int int3 = 3;
@@ -28,12 +30,14 @@ namespace CustomListUnitTests
             list2.Add(int5);
             list1.Zip(list2);
 
+            list3.Add(int2);
+            list3.Add(int3);
+            list3.Add(int4);
+            list3.Add(int5);
+            list3.Add(int6);
+
             //Assert
-            Assert.AreEqual(int2, list1[0]);
-            Assert.AreEqual(int3, list1[1]);
-            Assert.AreEqual(int4, list1[2]);
-            Assert.AreEqual(int5, list1[3]);
-            Assert.AreEqual(int6, list1[4]);
+            Assert.AreEqual(list3.ToString(), list1.ToString());
         }
 
 
@@ -43,6 +47,8 @@ namespace CustomListUnitTests
             //Arrange
             CustomList<string> list1 = new CustomList<string>();
             CustomList<string> list2 = new CustomList<string>();
+            CustomList<string> list3 = new CustomList<string>();
+
             string position1 = "first";
             string position2 = "second";
             string position3 = "third";
@@ -54,10 +60,12 @@ namespace CustomListUnitTests
             list2.Add(position3);
             list1.Zip(list2);
 
+            list3.Add(position2);
+            list3.Add(position1);
+            list3.Add(position3);
+
             //Assert
-            Assert.AreEqual(position2, list1[0]);
-            Assert.AreEqual(position1, list1[1]);
-            Assert.AreEqual(position3, list1[2]);
+            Assert.AreEqual(list3.ToString(), list1.ToString());
         }
 
 
@@ -67,6 +75,8 @@ namespace CustomListUnitTests
             //Arrange
             CustomList<double> list1 = new CustomList<double>();
             CustomList<double> list2 = new CustomList<double>();
+            CustomList<double> list3 = new CustomList<double>();
+
             double double1 = 1.0;
             double double2 = 2.2;
             double double3 = 3.3;
@@ -83,13 +93,15 @@ namespace CustomListUnitTests
             list2.Add(double6);
             list1.Zip(list2);
 
+            list3.Add(double1);
+            list3.Add(double4);
+            list3.Add(double2);
+            list3.Add(double5);
+            list3.Add(double3);
+            list3.Add(double6);
+
             //Assert
-            Assert.AreEqual(double1, list1[0]);
-            Assert.AreEqual(double4, list1[1]);
-            Assert.AreEqual(double2, list1[2]);
-            Assert.AreEqual(double5, list1[3]);
-            Assert.AreEqual(double3, list1[4]);
-            Assert.AreEqual(double6, list1[5]);
+            Assert.AreEqual(list3.ToString(), list1.ToString());
         }
 
         [TestMethod]
@@ -98,6 +110,8 @@ namespace CustomListUnitTests
             //Arrange
             CustomList<char> list1 = new CustomList<char>();
             CustomList<char> list2 = new CustomList<char>();
+            CustomList<char> list3 = new CustomList<char>();
+
             char chara = 'a';
             char charb = 'b';
             char charc = 'c';
@@ -110,11 +124,13 @@ namespace CustomListUnitTests
             list2.Add(chard);
             list2.Zip(list1);
 
+            list3.Add(charc);
+            list3.Add(chara);
+            list3.Add(chard);
+            list3.Add(charb);
+
             //Assert
-            Assert.AreEqual(charc, list2[0]);
-            Assert.AreEqual(chara, list2[1]);
-            Assert.AreEqual(chard, list2[2]);
-            Assert.AreEqual(charb, list2[3]);
+            Assert.AreEqual(list3.ToString(), list2.ToString());
         }
 
         [TestMethod]
@@ -123,6 +139,8 @@ namespace CustomListUnitTests
             //Arrange
             CustomList<decimal> list1 = new CustomList<decimal>();
             CustomList<decimal> list2 = new CustomList<decimal>();
+            CustomList<decimal> list3 = new CustomList<decimal>();
+
             decimal dec1 = new decimal(1.01);
             decimal dec2 = new decimal(2.02);
             decimal dec3 = new decimal(3.03);
@@ -135,11 +153,13 @@ namespace CustomListUnitTests
             list2.Add(dec4);
             list1.Zip(list2);
 
+            list1.Add(dec2);
+            list1.Add(dec1);
+            list2.Add(dec3);
+            list2.Add(dec4);
+
             //Assert
-            Assert.AreEqual(dec2, list1[0]);
-            Assert.AreEqual(dec1, list1[1]);
-            Assert.AreEqual(dec3, list1[2]);
-            Assert.AreEqual(dec4, list1[3]);
+            Assert.AreEqual(list3.ToString(), list1.ToString());
         }
         //zip diff sized lists, test each list being the smaller one
     }
