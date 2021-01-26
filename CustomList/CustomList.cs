@@ -141,14 +141,14 @@ namespace CustomList
 
         public override string ToString() //need to code this out
         {
-            string finishedString;
+            string finishedString = "";
 
             for(int i = 0; i < this.Count; i++)
             {
-                finishedString + this[i];
+                String.Concat(finishedString, this[i]); // may need to change this method
             }
 
-            return 
+            return finishedString;
         }
     }
 }
