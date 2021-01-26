@@ -30,6 +30,32 @@ namespace CustomList
         }
            
         // Step Two: Indexer
+        public T this[int i]
+        {
+            set { items[i] = value;  }
+            get { return items[i]; }
+        }
         // Step Three: Add Method
+        public void Add(T item)
+        {
+            if(count == items.Length)
+            {
+                T[] items2 = new T[items.Length * 2];
+
+                for(int i = 0; i < items.Length; i++)
+                {
+                    items2[i] = items[i];
+                }
+                items = items2; //this line may cause problems
+
+                items[count] = item;
+                count++;
+            }
+            else
+            {
+                items[count] = item;
+                count++;
+            }
+        }
     }
 }
