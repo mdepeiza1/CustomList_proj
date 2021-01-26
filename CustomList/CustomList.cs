@@ -62,7 +62,7 @@ namespace CustomList
         {
             int indexOfElement = items.Length;
             bool removeSuccess;
-            T[] items2 = new T[0];
+            T[] items2;
             for (int i = 0; i < items.Length; i++)
             {
                 if(items[i].Equals(item)) // .equals may be an issue
@@ -73,23 +73,36 @@ namespace CustomList
                 else
                 {
                     removeSuccess = false;
+                    return removeSuccess;
                 }
             }
 
             if (indexOfElement == 0 && items.Length == 1)
             {
+                items2 = new T[0];
                 items = items2;
                 removeSuccess = true;
+                return removeSuccess;
             }
             else if (indexOfElement == items.Length - 1 && items.Length > 1)
             {
-
+                items2 = new T[this.Count];
+                for (int i = 0; i < items.Length - 1; i++)
+                {
+                    items2[i] = items[i];
+                }
+                items = items2;
+                removeSuccess = true;
+                return removeSuccess;
             }
-
-            for(int i = indexOfElement; i < item.Length-1; i++)
+            else //need to code when indexOfElement is not first or last
             {
+                for (int i = indexOfElement; i < items.Length - 1; i++)
+                {
 
+                }
             }
+
         }
 
         public static CustomList<T> operator +(CustomList<T> a, CustomList<T> b)
@@ -109,7 +122,7 @@ namespace CustomList
             return list3;
         }
 
-        public override string ToString()
+        public override string ToString() //need to code this out
         {
             string finishedString;
 
