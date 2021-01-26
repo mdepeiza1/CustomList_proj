@@ -11,9 +11,10 @@ namespace CustomListUnitTests
         public void MakeTwoLists_AddIntsToBothListsWithOneInCommon_CheckFinalList()
         {
             //Arrange
-            CustomList list1 = new CustomList();
-            CustomList list2 = new CustomList();
-            CustomList list3 = new CustomList();
+            CustomList<int> list1 = new CustomList<int>();
+            CustomList<int> list2 = new CustomList<int>();
+            CustomList<int> list3 = new CustomList<int>();
+            CustomList<int> list4 = new CustomList<int>();
             int int1 = 1;
             int int2 = 2;
             int int3 = 3;
@@ -29,9 +30,11 @@ namespace CustomListUnitTests
             list2.Add(int5);
             list3 = list1 - list2;
 
+            list4.Add(int2);
+            list4.Add(int4);
+
             //Assert
-            Assert.AreEqual(int2, list3[0]);
-            Assert.AreEqual(int4, list3[1]);
+            Assert.AreEqual(list4.ToString(), list3.ToString());
         }
 
 
@@ -39,9 +42,10 @@ namespace CustomListUnitTests
         public void MakeTwoLists_AddStringsToBothListsWithOneInCommon_CheckFinalList()
         {
             //Arrange
-            CustomList list1 = new CustomList();
-            CustomList list2 = new CustomList();
-            CustomList list3 = new CustomList();
+            CustomList<string> list1 = new CustomList<string>();
+            CustomList<string> list2 = new CustomList<string>();
+            CustomList<string> list3 = new CustomList<string>();
+            CustomList<string> list4 = new CustomList<string>();
             string position1 = "first";
             string position2 = "second";
             string position3 = "third";
@@ -56,9 +60,11 @@ namespace CustomListUnitTests
             list2.Add(position3);
             list3 = list1 - list2;
 
+            list4.Add(position2);
+            list4.Add(position4);
+
             //Assert
-            Assert.AreEqual(position2, list3[0]);
-            Assert.AreEqual(position4, list3[1]);
+            Assert.AreEqual(list4.ToString(), list3.ToString());
         }
 
 
@@ -66,9 +72,10 @@ namespace CustomListUnitTests
         public void MakeTwoLists_AddDoublesToBothListsWithOneInCommon_CheckFinalList()
         {
             //Arrange
-            CustomList list1 = new CustomList();
-            CustomList list2 = new CustomList();
-            CustomList list3 = new CustomList();
+            CustomList<double> list1 = new CustomList<double>();
+            CustomList<double> list2 = new CustomList<double>();
+            CustomList<double> list3 = new CustomList<double>();
+            CustomList<double> list4 = new CustomList<double>();
             double double1 = 1.0;
             double double2 = 2.2;
             double double3 = 3.3;
@@ -86,19 +93,22 @@ namespace CustomListUnitTests
             list2.Add(double6);
             list3 = list1 - list2;
 
+            list4.Add(double1);
+            list4.Add(double2);
+            list4.Add(double3);
+
             //Assert
-            Assert.AreEqual(double1, list3[0]);
-            Assert.AreEqual(double2, list3[1]);
-            Assert.AreEqual(double3, list3[2]);
+            Assert.AreEqual(list4.ToString(), list3.ToString());
         }
 
         [TestMethod]
         public void MakeTwoLists_AddCharsToBothListsWithOneInCommon_CheckFinalList()
         {
             //Arrange
-            CustomList list1 = new CustomList();
-            CustomList list2 = new CustomList();
-            CustomList list3 = new CustomList();
+            CustomList<char> list1 = new CustomList<char>();
+            CustomList<char> list2 = new CustomList<char>();
+            CustomList<char> list3 = new CustomList<char>();
+            CustomList<char> list4 = new CustomList<char>();
             char chara = 'a';
             char charb = 'b';
             char charc = 'c';
@@ -113,19 +123,22 @@ namespace CustomListUnitTests
             list2.Add(chard);
             list3 = list1 - list2;
 
+            list4.Add(chara);
+            list4.Add(charc);
+            list4.Add(charb);
+
             //Assert
-            Assert.AreEqual(chara, list3[0]);
-            Assert.AreEqual(charc, list3[1]);
-            Assert.AreEqual(charb, list3[2]); //maybe this isn't the correct implementation maybe charc should be removed from the list altogether
+            Assert.AreEqual(list4.ToString(), list3.ToString());
         }
 
         [TestMethod]
         public void MakeTwoLists_AddDecimalsToBothListsWithOneInCommon_CheckFinalList()
         {
             //Arrange
-            CustomList list1 = new CustomList();
-            CustomList list2 = new CustomList();
-            CustomList list3 = new CustomList();
+            CustomList<decimal> list1 = new CustomList<decimal>();
+            CustomList<decimal> list2 = new CustomList<decimal>();
+            CustomList<decimal> list3 = new CustomList<decimal>();
+            CustomList<decimal> list4 = new CustomList<decimal>();
             decimal dec1 = new decimal(1.01);
             decimal dec2 = new decimal(2.02);
             decimal dec3 = new decimal(3.03);
@@ -138,8 +151,10 @@ namespace CustomListUnitTests
             list2.Add(dec3);
             list3 = list1 - list2;
 
+            list4.Add(dec1);
+
             //Assert
-            Assert.AreEqual(dec1, list3[0]);
+            Assert.AreEqual(list4.ToString(), list3.ToString());
         }
     }
 }

@@ -11,7 +11,7 @@ namespace CustomListUnitTests
         public void AddThreeIntsToACustomList_CheckToStringIsAsExpected()
         {
             //Arrange
-            CustomList list = new CustomList();
+            CustomList<int> list = new CustomList<int>();
             string expected = "123";
             string actual;
             int int1 = 1;
@@ -32,7 +32,7 @@ namespace CustomListUnitTests
         public void AddThreeCharsToACustomList_CheckToStringIsAsExpected()
         {
             //Arrange
-            CustomList list = new CustomList();
+            CustomList<char> list = new CustomList<char>();
             string expected = "abc";
             string actual;
             char char1 = 'a';
@@ -53,7 +53,7 @@ namespace CustomListUnitTests
         public void AddTwoStringsToACustomList_CheckToStringIsAsExpected()
         {
             //Arrange
-            CustomList list = new CustomList();
+            CustomList<string> list = new CustomList<string>();
             string position1 = "first";
             string position2 = "second";
             string expected = "firstsecond";
@@ -72,7 +72,7 @@ namespace CustomListUnitTests
         public void AddThreeDoublesToACustomList_CheckToStringIsAsExpected()
         {
             //Arrange
-            CustomList list = new CustomList();
+            CustomList<double> list = new CustomList<double>();
             string expected = "2.13.24.4";
             string actual;
             double double1 = 2.1;
@@ -93,7 +93,7 @@ namespace CustomListUnitTests
         public void AddThreeCharsToACustomList_RemoveCharTwo_CheckToStringIsAsExpected()
         {
             //Arrange
-            CustomList list = new CustomList();
+            CustomList<char> list = new CustomList<char>();
             string expected = "ac";
             string actual;
             char char1 = 'a';

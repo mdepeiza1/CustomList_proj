@@ -11,20 +11,18 @@ namespace CustomListUnitTests
         public void MakeTwoLists_AddIntsToBothLists_CheckFinalList()
         {
             //Arrange
-            CustomList list1 = new CustomList();
-            CustomList list2 = new CustomList();
-            CustomList list3 = new CustomList();
+            CustomList<int> list1 = new CustomList<int>();
+            CustomList<int> list2 = new CustomList<int>();
+            CustomList<int> list3 = new CustomList<int>();
             int int1 = 1;
             int int2 = 2;
             int int3 = 3;
             int int4 = 4;
             int int5 = 5;
-            int int6 = 6;
 
             //Act
             list1.Add(int2);
             list1.Add(int4);
-            list1.Add(int6);
             list2.Add(int1);
             list2.Add(int3);
             list2.Add(int5);
@@ -33,20 +31,19 @@ namespace CustomListUnitTests
             //Assert
             Assert.AreEqual(int2, list3[0]);
             Assert.AreEqual(int4, list3[1]);
-            Assert.AreEqual(int6, list3[2]);
-            Assert.AreEqual(int1, list3[3]);
-            Assert.AreEqual(int3, list3[4]);
-            Assert.AreEqual(int5, list3[5]);
-        }
+            Assert.AreEqual(int1, list3[2]);
+            Assert.AreEqual(int3, list3[3]);
+            Assert.AreEqual(int5, list3[4]);
+        } //Make one assert per test. Also make 4th list compare list4.ToString to list3.ToString
 
 
         [TestMethod]
         public void MakeTwoLists_AddStringsToBothLists_CheckFinalList()
         {
             //Arrange
-            CustomList list1 = new CustomList();
-            CustomList list2 = new CustomList();
-            CustomList list3 = new CustomList();
+            CustomList<string> list1 = new CustomList<string>();
+            CustomList<string> list2 = new CustomList<string>();
+            CustomList<string> list3 = new CustomList<string>();
             string position1 = "first";
             string position2 = "second";
             string position3 = "third";
@@ -55,15 +52,13 @@ namespace CustomListUnitTests
             //Act
             list1.Add(position2);
             list1.Add(position4);
-            list2.Add(position1);
             list2.Add(position3);
             list3 = list1 + list2;
 
             //Assert
             Assert.AreEqual(position2, list3[0]);
             Assert.AreEqual(position4, list3[1]);
-            Assert.AreEqual(position1, list3[2]);
-            Assert.AreEqual(position3, list3[3]);
+            Assert.AreEqual(position3, list3[2]);
         }
 
 
@@ -71,9 +66,9 @@ namespace CustomListUnitTests
         public void MakeTwoLists_AddDoublesToBothLists_CheckFinalList()
         {
             //Arrange
-            CustomList list1 = new CustomList();
-            CustomList list2 = new CustomList();
-            CustomList list3 = new CustomList();
+            CustomList<double> list1 = new CustomList<double>();
+            CustomList<double> list2 = new CustomList<double>();
+            CustomList<double> list3 = new CustomList<double>();
             double double1 = 1.0;
             double double2 = 2.2;
             double double3 = 3.3;
@@ -103,9 +98,9 @@ namespace CustomListUnitTests
         public void MakeTwoLists_AddCharsToBothLists_CheckFinalList()
         {
             //Arrange
-            CustomList list1 = new CustomList();
-            CustomList list2 = new CustomList();
-            CustomList list3 = new CustomList();
+            CustomList<char> list1 = new CustomList<char>();
+            CustomList<char> list2 = new CustomList<char>();
+            CustomList<char> list3 = new CustomList<char>();
             char chara = 'a';
             char charb = 'b';
             char charc = 'c';
@@ -129,9 +124,9 @@ namespace CustomListUnitTests
         public void MakeTwoLists_AddDecimalsToBothLists_CheckFinalList()
         {
             //Arrange
-            CustomList list1 = new CustomList();
-            CustomList list2 = new CustomList();
-            CustomList list3 = new CustomList();
+            CustomList<decimal> list1 = new CustomList<decimal>();
+            CustomList<decimal> list2 = new CustomList<decimal>();
+            CustomList<decimal> list3 = new CustomList<decimal>();
             decimal dec1 = new decimal(1.01);
             decimal dec2 = new decimal(2.02);
             decimal dec3 = new decimal(3.03);
@@ -150,5 +145,6 @@ namespace CustomListUnitTests
             Assert.AreEqual(dec1, list3[2]);
             Assert.AreEqual(dec4, list3[3]);
         }
+        //Test varied size lists added together (also maybe an empty list)
     }
 }

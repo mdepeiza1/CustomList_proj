@@ -50,10 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddMethodUnitTest.cs" />
-    <Compile Include="CapacityPropertyUnitTest.cs" />
-    <Compile Include="CountPropertyUnitTest.cs" />
     <Compile Include="IndexUnitTest.cs" />
-    <Compile Include="IterableUnitTest.cs" />
     <Compile Include="MinusOperatorUnitTest.cs" />
     <Compile Include="PlusOperatorUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

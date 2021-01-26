@@ -9,25 +9,26 @@ namespace CustomListUnitTests
     public class IndexUnitTest
     {
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        //[ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void CheckForOutOfBoundsException()
         {
             //Arrange
             //may need to revise this by adding objects, then checking if out of bounds
-            CustomList list = new CustomList();
+            CustomList<string> list = new CustomList<string>();
             string actual; 
 
             //Act
-            actual = list[0];
+            
 
             //Assert
+            Assert.ThrowsException<ArgumentOutOfRangeException>(actual = list[0]); //make sure this line is correct
         }
 
         [TestMethod]
         public void CheckForIntAccessibility()
         {
             //Arrange
-            CustomList list = new CustomList();
+            CustomList<int> list = new CustomList<int>();
             int expected = 34;
             int int1 = 34;
             int actual;
@@ -44,7 +45,7 @@ namespace CustomListUnitTests
         public void CheckForCharAccessibility()
         {
             //Arrange
-            CustomList list = new CustomList();
+            CustomList<char> list = new CustomList<char>();
             char char1 = 'a';
             char char2 = 'b';
             char expected = 'b';
@@ -63,7 +64,7 @@ namespace CustomListUnitTests
         public void CheckForStringAccessibility()
         {
             //Arrange
-            CustomList list = new CustomList();
+            CustomList<string> list = new CustomList<string>();
             string expected = "first";
             string position1 = "first";
             string actual;
@@ -80,7 +81,7 @@ namespace CustomListUnitTests
         public void CheckForDoubleAccessibility()
         {
             //Arrange
-            CustomList list = new CustomList();
+            CustomList<double> list = new CustomList<double>();
             double expected = 4.0;
             double double1 = 4.0;
             double actual;

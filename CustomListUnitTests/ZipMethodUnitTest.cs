@@ -24,18 +24,16 @@ namespace CustomListUnitTests
             list1.Add(int2);
             list1.Add(int4);
             list1.Add(int6);
-            list2.Add(int1);
             list2.Add(int3);
             list2.Add(int5);
             list1.Zip(list2);
 
             //Assert
             Assert.AreEqual(int2, list1[0]);
-            Assert.AreEqual(int1, list1[1]);
+            Assert.AreEqual(int3, list1[1]);
             Assert.AreEqual(int4, list1[2]);
-            Assert.AreEqual(int3, list1[3]);
+            Assert.AreEqual(int5, list1[3]);
             Assert.AreEqual(int6, list1[4]);
-            Assert.AreEqual(int5, list1[5]);
         }
 
 
@@ -52,7 +50,6 @@ namespace CustomListUnitTests
 
             //Act
             list1.Add(position2);
-            list1.Add(position4);
             list2.Add(position1);
             list2.Add(position3);
             list1.Zip(list2);
@@ -60,8 +57,7 @@ namespace CustomListUnitTests
             //Assert
             Assert.AreEqual(position2, list1[0]);
             Assert.AreEqual(position1, list1[1]);
-            Assert.AreEqual(position4, list1[2]);
-            Assert.AreEqual(position3, list1[3]);
+            Assert.AreEqual(position3, list1[2]);
         }
 
 
@@ -145,5 +141,6 @@ namespace CustomListUnitTests
             Assert.AreEqual(dec3, list1[2]);
             Assert.AreEqual(dec4, list1[3]);
         }
+        //zip diff sized lists, test each list being the smaller one
     }
 }

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class CustomList
+    public class CustomList<T>
     {
+        // Step One: Member Variables, Properties, Constructor
+        // Step Two: Indexer
+        // Step Three: Add Method
     }
 }
