@@ -95,12 +95,22 @@ namespace CustomList
                 removeSuccess = true;
                 return removeSuccess;
             }
-            else //need to code when indexOfElement is not first or last
+            else
             {
-                for (int i = indexOfElement; i < this.Capacity - 1; i++)
+                items2 = new T[this.Capacity - 1];
+                int j = 0;
+                for (int i = 0; i < this.Capacity; i++)
                 {
-
+                    if (indexOfElement != i)
+                    {
+                        items2[j] = items[i];
+                        j++;
+                    }
+                    i++;
                 }
+                items = items2;
+                removeSuccess = true;
+                return removeSuccess;
             }
 
         }
