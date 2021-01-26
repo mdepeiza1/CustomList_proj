@@ -101,12 +101,15 @@ namespace CustomList
                 int j = 0;
                 for (int i = 0; i < this.Capacity; i++)
                 {
-                    if (indexOfElement != i)
+                    if (indexOfElement == i)
+                    {
+                        continue;
+                    }
+                    else
                     {
                         items2[j] = items[i];
                         j++;
                     }
-                    i++;
                 }
                 items = items2;
                 removeSuccess = true;
