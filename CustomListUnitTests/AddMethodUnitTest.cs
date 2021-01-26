@@ -30,7 +30,7 @@ namespace CustomListUnitTests
             //Arrange
             CustomList<string> list = new CustomList<string>();
             string expected = "first";
-            int actual;
+            string actual;
 
             //Act
             list.Add(expected);

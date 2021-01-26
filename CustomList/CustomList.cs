@@ -57,5 +57,68 @@ namespace CustomList
                 count++;
             }
         }
+
+        public bool Remove(T item)
+        {
+            int indexOfElement = items.Length;
+            bool removeSuccess;
+            T[] items2 = new T[0];
+            for (int i = 0; i < items.Length; i++)
+            {
+                if(items[i].Equals(item)) // .equals may be an issue
+                {
+                    indexOfElement = i;
+                    break;
+                }
+                else
+                {
+                    removeSuccess = false;
+                }
+            }
+
+            if (indexOfElement == 0 && items.Length == 1)
+            {
+                items = items2;
+                removeSuccess = true;
+            }
+            else if (indexOfElement == items.Length - 1 && items.Length > 1)
+            {
+
+            }
+
+            for(int i = indexOfElement; i < item.Length-1; i++)
+            {
+
+            }
+        }
+
+        public static CustomList<T> operator +(CustomList<T> a, CustomList<T> b)
+        {
+            CustomList<T> list3 = new CustomList<T>();
+
+            for (int i = 0; i < b.Count; i++)
+            {
+                list3.Add(a[i]);
+            }
+
+            for (int i = 0; i < b.Count; i++)
+            {
+                list3.Add(b[i]);
+            }
+
+            return list3;
+        }
+
+        public override string ToString()
+        {
+            string finishedString;
+
+            for(int i = 0; i < this.Count; i++)
+            {
+                finishedString + this[i];
+            }
+
+            return 
+        }
     }
 }
