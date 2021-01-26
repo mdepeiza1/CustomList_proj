@@ -150,5 +150,10 @@ namespace CustomList
 
             return finishedString;
         }
+
+        public CustomList<T>  Zip(CustomList<T> b) // needs to be implemented
+        {
+            return;
+        }
     }
 }
