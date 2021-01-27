@@ -9,7 +9,7 @@ namespace CustomListUnitTests
     public class IndexUnitTest
     {
         [TestMethod]
-        //[ExpectedException(typeof(ArgumentOutOfRangeException))]
+        //[ExpectedException(typeof(IndexOutOfRangeException))]
         public void CheckForOutOfBoundsException()
         {
             //Arrange
@@ -18,10 +18,10 @@ namespace CustomListUnitTests
             string actual;
 
             //Act
-            
+            //actual = list[0];
 
             //Assert
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => actual = list[0]); //make sure this line is correct
+            Assert.ThrowsException<IndexOutOfRangeException>(() => actual = list[6]); //initializes to array of size 4, this may or may not be a problem
         }
 
         [TestMethod]

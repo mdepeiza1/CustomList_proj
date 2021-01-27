@@ -34,7 +34,7 @@ namespace CustomList
         public T this[int i]
         {
             set { items[i] = value;  }
-            get { return items[i]; }
+            get { return items[i]; } // initalizes to array of size 4
         }
 
         public IEnumerator GetEnumerator()
@@ -89,7 +89,7 @@ namespace CustomList
             }
             else if (indexOfElement == 0 && this.Capacity == 1)
             {
-                items2 = new T[0];
+                items2 = new T[4];
                 items = items2;
                 removeSuccess = true;
                 return removeSuccess;
