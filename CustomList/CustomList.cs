@@ -178,32 +178,32 @@ namespace CustomList
             return finishedString;
         }
 
-        public CustomList<T> Zip(CustomList<T> b) // void Zip(CustomList<T> b) //  // might need to return a list
+        public CustomList<T> Zip(CustomList<T> listToBeZippedIn) // void Zip(CustomList<T> b) //  // might need to return a list
         { //listToZipIn
             CustomList<T> list3 = new CustomList<T>();
-            if(this.Count <= b.Count)
+            if(this.Count <= listToBeZippedIn.Count)
             {
                 for (int i = 0; i < this.Count; i++)
                 {
                     list3.Add(this[i]);
-                    list3.Add(b[i]);
+                    list3.Add(listToBeZippedIn[i]);
                 }
 
-                for (int i = this.Count; i < b.Count; i++)
+                for (int i = this.Count; i < listToBeZippedIn.Count; i++)
                 {
-                    list3.Add(b[i]);
+                    list3.Add(listToBeZippedIn[i]);
                 }
                 return list3;
             }
             else
             {
-                for (int i = 0; i < b.Count; i++)
+                for (int i = 0; i < listToBeZippedIn.Count; i++)
                 {
                     list3.Add(this[i]);
-                    list3.Add(b[i]);
+                    list3.Add(listToBeZippedIn[i]);
                 }
 
-                for (int i = b.Count; i < this.Count; i++)
+                for (int i = listToBeZippedIn.Count; i < this.Count; i++)
                 {
                     list3.Add(this[i]);
                 }
