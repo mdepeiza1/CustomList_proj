@@ -15,7 +15,6 @@ namespace CustomListUnitTests
             CustomList<int> list2 = new CustomList<int>();
             CustomList<int> list3 = new CustomList<int>();
 
-            int int1 = 1;
             int int2 = 2;
             int int3 = 3;
             int int4 = 4;
@@ -52,7 +51,6 @@ namespace CustomListUnitTests
             string position1 = "first";
             string position2 = "second";
             string position3 = "third";
-            string position4 = "fourth";
 
             //Act
             list1.Add(position2);

@@ -49,7 +49,7 @@ namespace CustomListUnitTests
             CustomList<string> list2 = new CustomList<string>();
             CustomList<string> list3 = new CustomList<string>();
             CustomList<string> list4 = new CustomList<string>();
-            string position1 = "first";
+
             string position2 = "second";
             string position3 = "third";
             string position4 = "fourth";
