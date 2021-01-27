@@ -57,25 +57,6 @@ namespace CustomListUnitTests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod] // might need to remove this one
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void AddTwoItemsToList_Remove1ItemFromList_Index1isError()
-        {
-            //Arrange
-            CustomList<string> list = new CustomList<string>();
-            string position1 = "first";
-            string position2 = "second";
-            string actual;
-
-            //Act
-            list.Add(position1);
-            list.Add(position2);
-            list.Remove(position2);
-            actual = list[1];
-
-            //Assert
-        }
-
         [TestMethod]
         public void AddTwoOfTheSameItemToList_RemoveItemFromList_ReturnsTrue()
         {

@@ -73,7 +73,7 @@ namespace CustomList
             int indexOfElement = this.Capacity;
             bool removeSuccess;
             T[] items2;
-            for (int i = 0; i < this.Capacity; i++)
+            for (int i = 0; i < this.count; i++)
             {
                 if(items[i].Equals(item)) // .equals may be an issue
                 {
