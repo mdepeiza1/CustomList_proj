@@ -166,7 +166,35 @@ namespace CustomList
 
         public CustomList<T>  Zip(CustomList<T> b) // needs to be implemented
         {
-            return;
+            CustomList<T> list3 = new CustomList<T>();
+            if(this.Count <= b.Count)
+            {
+                for (int i = 0; i < this.Count; i++)
+                {
+                    list3.Add(this[i]);
+                    list3.Add(b[i]);
+                }
+
+                for (int i = this.Count; i < b.Count; i++)
+                {
+                    list3.Add(b[i]);
+                }
+                return list3;
+            }
+            else
+            {
+                for (int i = 0; i < b.Count; i++)
+                {
+                    list3.Add(this[i]);
+                    list3.Add(b[i]);
+                }
+
+                for (int i = b.Count; i < this.Count; i++)
+                {
+                    list3.Add(this[i]);
+                }
+                return list3;
+            }
         }
     }
 }
