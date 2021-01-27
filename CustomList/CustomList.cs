@@ -87,10 +87,11 @@ namespace CustomList
                 removeSuccess = false;
                 return removeSuccess;
             }
-            else if (indexOfElement == 0 && this.Capacity == 1)
+            else if (indexOfElement == 0 && this.count == 1)
             {
                 items2 = new T[4];
                 items = items2;
+                count--;
                 removeSuccess = true;
                 return removeSuccess;
             }
@@ -102,6 +103,7 @@ namespace CustomList
                     items2[i] = items[i];
                 }
                 items = items2;
+                count--;
                 removeSuccess = true;
                 return removeSuccess;
             }
@@ -122,6 +124,7 @@ namespace CustomList
                     }
                 }
                 items = items2;
+                count--;
                 removeSuccess = true;
                 return removeSuccess;
             }

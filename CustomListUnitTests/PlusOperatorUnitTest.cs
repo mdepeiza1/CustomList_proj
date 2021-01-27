@@ -94,12 +94,12 @@ namespace CustomListUnitTests
             list2.Add(double6);
             list3 = list1 + list2;
 
-            list1.Add(double1);
-            list1.Add(double2);
-            list1.Add(double3);
-            list2.Add(double4);
-            list2.Add(double5);
-            list2.Add(double6);
+            list4.Add(double1);
+            list4.Add(double2);
+            list4.Add(double3);
+            list4.Add(double4);
+            list4.Add(double5);
+            list4.Add(double6);
 
             //Assert
             Assert.AreEqual(list4.ToString(), list3.ToString());
