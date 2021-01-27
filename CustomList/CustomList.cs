@@ -168,7 +168,8 @@ namespace CustomList
 
             for(int i = 0; i < this.Count; i++)
             {
-                String.Concat(finishedString, this[i]); // may need to change this method
+                //String.Concat(finishedString, this[i]); // may need to change this method
+                finishedString = finishedString + this[i];
             }
 
             return finishedString;
