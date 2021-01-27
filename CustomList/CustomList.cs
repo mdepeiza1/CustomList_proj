@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class CustomList<T>
+    public class CustomList<T> : IEnumerable
     {
         // Step One: Member Variables, Properties, Constructor
         private int count;
@@ -35,6 +36,15 @@ namespace CustomList
             set { items[i] = value;  }
             get { return items[i]; }
         }
+
+        public IEnumerator GetEnumerator()
+        {
+            for (int i = 0; i < this.Count; i++)
+            {
+                yield return this[i];
+            }
+        }
+
         // Step Three: Add Method
         public void Add(T item)
         {
