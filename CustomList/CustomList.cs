@@ -178,8 +178,8 @@ namespace CustomList
             return finishedString;
         }
 
-        public CustomList<T>  Zip(CustomList<T> b) // needs to be implemented
-        {
+        public CustomList<T> Zip(CustomList<T> b) // void Zip(CustomList<T> b) //  // might need to return a list
+        { //listToZipIn
             CustomList<T> list3 = new CustomList<T>();
             if(this.Count <= b.Count)
             {
