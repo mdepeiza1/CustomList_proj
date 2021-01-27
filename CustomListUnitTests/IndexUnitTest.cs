@@ -15,7 +15,7 @@ namespace CustomListUnitTests
             //Arrange
             //may need to revise this by adding objects, then checking if out of bounds
             CustomList<string> list = new CustomList<string>();
-            string actual; 
+            string actual;
 
             //Act
             

@@ -70,14 +70,14 @@ namespace CustomList
                     indexOfElement = i;
                     break;
                 }
-                else
-                {
-                    removeSuccess = false;
-                    return removeSuccess;
-                }
             }
 
-            if (indexOfElement == 0 && this.Capacity == 1)
+            if(indexOfElement == this.Capacity)
+            {
+                removeSuccess = false;
+                return removeSuccess;
+            }
+            else if (indexOfElement == 0 && this.Capacity == 1)
             {
                 items2 = new T[0];
                 items = items2;
