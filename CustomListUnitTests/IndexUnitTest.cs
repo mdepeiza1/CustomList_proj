@@ -21,7 +21,7 @@ namespace CustomListUnitTests
             
 
             //Assert
-            Assert.ThrowsException<ArgumentOutOfRangeException>(actual = list[0]); //make sure this line is correct
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => actual = list[0]); //make sure this line is correct
         }
 
         [TestMethod]
