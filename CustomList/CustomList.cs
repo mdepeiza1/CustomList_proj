@@ -219,7 +219,14 @@ namespace CustomList
 
             for(i = 1; i < this.count; i++)
             {
-
+                key = this[i];
+                j = i - 1;
+                while((j >= 0) && (this[j].ToString().CompareTo(key.ToString()) > 0))
+                {
+                    this[j + 1] = this[j];
+                    j = j - 1;
+                }
+                this[j + 1] = key;
             }
         }
     }
