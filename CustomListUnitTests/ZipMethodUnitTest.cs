@@ -35,7 +35,6 @@ namespace CustomListUnitTests
             list3.Add(int3);
             list3.Add(int4);
             list3.Add(int5);
-
             list3.Add(int6);
 
             //Assert

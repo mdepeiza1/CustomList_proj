@@ -210,5 +210,17 @@ namespace CustomList
                 return list3;
             }
         }
+
+        public void Sort() //insertion sort
+        {
+            int i;
+            T key;
+            int j;
+
+            for(i = 1; i < this.count; i++)
+            {
+
+            }
+        }
     }
 }
