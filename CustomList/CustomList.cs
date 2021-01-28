@@ -131,35 +131,35 @@ namespace CustomList
 
         }
 
-        public static CustomList<T> operator +(CustomList<T> a, CustomList<T> b)
+        public static CustomList<T> operator +(CustomList<T> listOne, CustomList<T> listTwo)
         {
             CustomList<T> list3 = new CustomList<T>();
 
-            for (int i = 0; i < a.Count; i++)
+            for (int i = 0; i < listOne.Count; i++)
             {
-                list3.Add(a[i]);
+                list3.Add(listOne[i]);
             }
 
-            for (int i = 0; i < b.Count; i++)
+            for (int i = 0; i < listTwo.Count; i++)
             {
-                list3.Add(b[i]);
+                list3.Add(listTwo[i]);
             }
 
             return list3;
         }
 
-        public static CustomList<T> operator -(CustomList<T> a, CustomList<T> b) // needs remove to be implemented for this to work
-        {
+        public static CustomList<T> operator -(CustomList<T> listOne, CustomList<T> listTwo) // needs remove to be implemented for this to work
+        { // good names for your parameters: CustomList<T> listOne, CustomList<T> listTwo
             CustomList<T> list3 = new CustomList<T>();
 
-            for (int i = 0; i < a.Count; i++)
+            for (int i = 0; i < listOne.Count; i++)
             {
-                list3.Add(a[i]);
+                list3.Add(listOne[i]);
             }
 
-            for (int i = 0; i < b.Count; i++)
+            for (int i = 0; i < listTwo.Count; i++)
             {
-                list3.Remove(b[i]);
+                list3.Remove(listTwo[i]);
             }
 
             return list3;

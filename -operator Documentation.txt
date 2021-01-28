@@ -1,6 +1,10 @@
 -operator overload
 
 Removes elements in CustomList<T> b from CustomList<T> a.
+
+
+Syntax
+
 public static CustomList<T> operator -(CustomList<T> a, CustomList<T> b)
 
 
